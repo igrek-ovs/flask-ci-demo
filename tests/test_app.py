@@ -27,4 +27,3 @@ def test_count_without_database(client, monkeypatch):
     monkeypatch.setattr(app_module, "DATABASE_URL", None)
     response = client.get("/count")
     assert response.status_code == 503
-import json
