@@ -13,7 +13,7 @@ def test_index(client):
     response = client.get("/")
     assert response.status_code == 200
     data = response.get_json()
-    assert data["message"] == "Hello"
+    assert data["message"] == "Hello from Docker!"
     assert "host" in data
 
 
